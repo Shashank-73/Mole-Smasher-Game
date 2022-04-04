@@ -1,0 +1,104 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body
+{
+    width: 100%;
+    height: 100vh;
+}
+body
+{
+    background-color: #1ebf13;
+    color: #fff;
+    overflow: hidden;
+}
+.wrapper
+{
+    width: 95%;
+    height: 90vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.wrapper h1
+{
+    margin-bottom: 4rem;
+}
+.wrapper .subwrapper
+{
+    width: 500px;
+    height: 500px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    gap: 80px;
+}
+.wrapper .subwrapper .hole
+{
+    background-color: rgb(165,85,11);
+    border-radius: 50%;
+    box-shadow: inset 0 10px 0 7px rgb(53, 21,6),
+                inset 0 20px 20px 15px rgba(0,0,0,.3);
+    position: relative;
+    overflow: hidden;
+}
+.hole .mole-img
+{
+    width: 70%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 0;
+    animation: raise .3s ease;    
+}
+@keyframes raise {
+    0%
+    {
+        transform: translateX(-50%) translateY(100%);
+    }
+    100%
+    {
+        transform: translateX(-50%) translateY(0);
+    }
+}
+.cursor
+{
+    position: absolute;
+    top: 100px;
+    left: 100px;
+    height: 100px;
+    width: 100px;
+    background-image: url('assets/hammer.png');
+    background-size: 100% 100%;
+    transform: translate(-20%, -20%);
+    transition: transform .1s;
+    pointer-events: none;
+}
+.cursor.active
+{
+    transform: translate(-20%,-20%) rotate(-45deg);
+}
+
+.btn
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+.btn button
+{
+    width: 130px;
+    height: 35px;
+    border: none;
+    border-radius: 50px;
+    font-size: 23px;
+    text-transform: uppercase;
+    font-weight: 700;
+    background: #1b1b1b;
+    color: #fff;
+}
