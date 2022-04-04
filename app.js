@@ -32,10 +32,6 @@ function go()
         go();
     },1500);
 }
-function stop()
-{
-    return;
-}
 btn.addEventListener('click',()=>
 {
     if(btn.textContent=='Play')
