@@ -4,7 +4,7 @@ let scoreElement=document.querySelector('.score span');
 let btn=document.querySelector('.btn button');
 
 let score=0;
-let audio=new Audio('assets/assets_smash.mp3');
+let audio=new Audio('Assets/assets_smash.mp3');
 function go()
 {
     const random=Math.floor(Math.random()* holes.length);
@@ -12,12 +12,12 @@ function go()
     let timer=null;
     const img=document.createElement('img');
     img.classList.add('mole-img');
-    img.src='assets/mole.png';
+    img.src='Assets/mole.png';
     img.addEventListener('click',()=>
     {
         score+=10;
         scoreElement.textContent=score;
-        img.src='assets/mole-whacked.png';
+        img.src='Assets/mole-whacked.png';
         audio.play();
         clearTimeout(timer);
         timer=setTimeout(()=>{
